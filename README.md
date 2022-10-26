@@ -26,7 +26,7 @@ Her følger den umiddelbare opgavefordeling.
 
 **Marius**
 - [ ] Regulering - Fødevadskammer
-	- [ ] Kravspecifikation
+	- [x] Kravspecifikation
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
 	- [ ] Kodetest
