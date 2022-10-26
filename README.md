@@ -8,6 +8,7 @@ I det følgende skal udarbejdes et PLC-program, der kan varetage regulering og s
 
 ## Opgavefordeling
 Her følger den umiddelbare opgavefordeling.
+
 **Malthe**
 - [ ] Regulering - Dampproduktion
 - [ ] Styring af kedlens vandkvalitet
@@ -43,7 +44,7 @@ Her følger den umiddelbare opgavefordeling.
 
 **Bo**
 - [ ] Regulering - Kondenstank	
-      - [ ] Kravspecifikation
+        - [ ] Kravspecifikation
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
 	- [ ] Kodetest
