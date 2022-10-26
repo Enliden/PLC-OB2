@@ -11,7 +11,17 @@ Her følger den umiddelbare opgavefordeling.
 
 **Malthe**
 - [ ] Regulering - Dampproduktion
+	- [ ] Kravspecifikation
+	- [ ] Kodedesign
+	- [ ] Kodeudfærdigelse
+	- [ ] Kodetest
+	- [ ] Commit
 - [ ] Styring af kedlens vandkvalitet
+	- [ ] Kravspecifikation
+	- [ ] Kodedesign
+	- [ ] Kodeudfærdigelse
+	- [ ] Kodetest
+	- [ ] Commit
 - [ ] Udarbejd ark til kundekrav
 
 **Marius**
@@ -44,14 +54,24 @@ Her følger den umiddelbare opgavefordeling.
 
 **Bo**
 - [ ] Regulering - Kondenstank	
-        - [ ] Kravspecifikation
+	- [ ] Kravspecifikation
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
 	- [ ] Kodetest
 	- [ ] Commit
 
 - [ ] HMI-Projekt
+	- [ ] Kravspecifikation
 	- [ ] Design
 	- [ ] Udfærdigelse
 	- [ ] Test
 	- [ ] Commit
+
+# V-modellen
+Ovenstående to-do liste er udarbejdet efter trin 2-4 i V-modellen. V-modellen består af 5 trin.
+
+1. Identifikation af kundekrav: Del og hersk, dvs. opgaven opdeles i de delprogrammer og -opgaver, som skal løses.
+2. Identifikation af tekniske krav og design af kode med henblik på at leve op til de krav.
+3. Implementering af programkode'
+4. Test af programkode ifht. tekniske krav
+5. Samling af alt kode, hele programmet og test ifht. kundekrav.
