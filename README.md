@@ -11,61 +11,63 @@ Her følger den umiddelbare opgavefordeling.
 
 **Malthe**
 - [ ] Regulering - Dampproduktion
-	- [ ] Kravspecifikation
+	- [ ] Kravspecifikation og testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
-	- [ ] Kodetest
-	- [ ] Commit
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Styring af kedlens vandkvalitet
-	- [ ] Kravspecifikation
+	- [ ] Kravspecifikation og testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
-	- [ ] Kodetest
-	- [ ] Commit
-- [ ] Udarbejd ark til kundekrav
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+- [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
 
 **Marius**
 - [ ] Regulering - Fødevadskammer
 	- [x] Kravspecifikation
+	- [ ] Testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
-	- [ ] Kodetest
-	- [ ] Commit
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Start/Stop/Nødstop (Marius)
-	- [ ] Krav
+	- [ ] Testkrav (testark)
 	- [ ] Design
-	- [ ] Kode
-	- [ ] Test
-	- [ ] Commit
+	- [ ] Programmering
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 **Magnus**
 - [ ] Regulering - Damp til opsamlingstank	
 	- [ ] Kravspecifikation
+	- [ ] Testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
-	- [ ] Kodetest
-	- [ ] Commit
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Alarmer
 	- [ ] Krav
 	- [ ] Design
 	- [ ] Kode
-	- [ ] Test
-	- [ ] Commit
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 **Bo**
 - [ ] Regulering - Kondenstank	
-	- [ ] Kravspecifikation
+	- [ ] Kravspecificering og testark
 	- [ ] Kodedesign
-	- [ ] Kodeudfærdigelse
-	- [ ] Kodetest
-	- [ ] Commit
+	- [ ] Programmering
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 - [ ] HMI-Projekt
 	- [ ] Kravspecifikation
 	- [ ] Design
-	- [ ] Udfærdigelse
-	- [ ] Test
-	- [ ] Commit
+	- [ ] Programmering og opsætning
+	- [ ] Test af kode
+	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 # V-modellen
 Ovenstående to-do liste er udarbejdet efter trin 2-4 i V-modellen. V-modellen består af 5 trin.
