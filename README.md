@@ -41,10 +41,10 @@ Her følger den umiddelbare opgavefordeling.
 
 **Magnus**
 - [ ] Regulering - Damp til opsamlingstank	
-	- [ ] Kravspecifikation
-	- [ ] Testark
-	- [ ] Kodedesign
-	- [ ] Kodeudfærdigelse
+	- [x] Kravspecifikation
+	- [x] Testark
+	- [x] Kodedesign
+	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Alarmer
