@@ -12,8 +12,8 @@ Her følger den umiddelbare opgavefordeling.
 **Malthe**
 - [ ] Regulering - Dampproduktion
 	- [ ] Kravspecifikation og testark
-	- [ ] Kodedesign
-	- [ ] Kodeudfærdigelse
+	- [x] Kodedesign
+	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Styring af kedlens vandkvalitet
@@ -22,7 +22,7 @@ Her følger den umiddelbare opgavefordeling.
 	- [ ] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-- [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
+
 
 **Marius**
 - [ ] Regulering - Fødevadskammer
@@ -38,6 +38,7 @@ Her følger den umiddelbare opgavefordeling.
 	- [ ] Programmering
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+- [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
 
 **Magnus**
 - [ ] Regulering - Damp til opsamlingstank	
