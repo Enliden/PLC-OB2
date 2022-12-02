@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.02" TargetName="Analyse" TargetType="Program" ContainsContext="true" ExportDate="Fri Dec 02 11:19:12 2022" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="EmulatorTest">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="Add_three_Numbers" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-08-22T09:24:58.380Z" CreatedBy="PROCES\MSK" EditedDate="2022-08-22T09:28:02.442Z" EditedBy="PROCES\MSK" SoftwareRevision="v32.02">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="nr1" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="nr2" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="nr3" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="nr4" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="ADD_01" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ADD_02" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="FBD">
+<FBDContent SheetSize="A3 - 297 x 420 mm" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="440" Y="280" Operand="nr1" HideDesc="false"/>
+<IRef ID="1" X="440" Y="300" Operand="nr2" HideDesc="false"/>
+<IRef ID="2" X="440" Y="320" Operand="nr3" HideDesc="false"/>
+<ORef ID="3" X="960" Y="320" Operand="nr4" HideDesc="false"/>
+<Block Type="ADD" ID="4" X="560" Y="220" Operand="ADD_01" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="ADD" ID="5" X="740" Y="240" Operand="ADD_02" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Wire FromID="0" ToID="4" ToParam="SourceA"/>
+<Wire FromID="1" ToID="4" ToParam="SourceB"/>
+<Wire FromID="2" ToID="5" ToParam="SourceB"/>
+<Wire FromID="4" FromParam="Dest" ToID="5" ToParam="SourceA"/>
+<Wire FromID="5" FromParam="Dest" ToID="3"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="Invers_Direkte" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-08-22T09:38:02.563Z" CreatedBy="PROCES\MSK" EditedDate="2022-08-22T09:53:38.045Z" EditedBy="PROCES\MSK" SoftwareRevision="v32.02">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="PV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="SP" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="fejl_e" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Invers_Direkte" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="SUB_01" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SUB_02" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SEL_01" DataType="SELECT" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0,0.00000000e+000,5.60519386e-045]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="SELECT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="In2" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SelectorIn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Invers" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Direkte" DataType="FBD_MATH" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="FBD">
+<FBDContent SheetSize="A3 - 297 x 420 mm" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="680" Y="380" Operand="Invers_Direkte" HideDesc="false"/>
+<IRef ID="1" X="340" Y="220" Operand="PV" HideDesc="false"/>
+<IRef ID="2" X="340" Y="180" Operand="SP" HideDesc="false"/>
+<ORef ID="3" X="1040" Y="260" Operand="fejl_e" HideDesc="false"/>
+<Block Type="SEL" ID="4" X="800" Y="180" Operand="SEL_01" VisiblePins="In1 In2 SelectorIn Out" HideDesc="false"/>
+<Block Type="SUB" ID="5" X="540" Y="220" Operand="Direkte" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="SUB" ID="6" X="540" Y="100" Operand="Invers" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Wire FromID="0" ToID="4" ToParam="SelectorIn"/>
+<Wire FromID="1" ToID="5" ToParam="SourceA"/>
+<Wire FromID="1" ToID="6" ToParam="SourceB"/>
+<Wire FromID="2" ToID="5" ToParam="SourceB"/>
+<Wire FromID="2" ToID="6" ToParam="SourceA"/>
+<Wire FromID="4" FromParam="Out" ToID="3"/>
+<Wire FromID="5" FromParam="Dest" ToID="4" ToParam="In2"/>
+<Wire FromID="6" FromParam="Dest" ToID="4" ToParam="In1"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="PID_regulator" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-09-26T07:06:19.224Z" CreatedBy="PROCES\MSK" EditedDate="2022-11-28T14:28:33.458Z" EditedBy="PROCES\MSK" SoftwareRevision="v32.02">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="SP" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Kp" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Ki" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Kd" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="U0" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="U_man" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="CV" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Invers_Direkte" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Manuel_Auto" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Zero_Ki" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Add_three_Numbers_01" DataType="Add_three_Numbers" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,[1,0.00000000e+000,0.00000000e+000,0.00000000e+000],[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="Add_three_Numbers">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="nr1" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="nr2" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="nr3" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="nr4" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Invers_Direkte_01" DataType="Invers_Direkte" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000,[1,0.00000000e+000,0.00000000e+000,0.00000000e+000],[1,0.00000000e+000,0.00000000e+000,0.00000000e+000],[1,0.00000000e+000,0.00000000e+000,0,0.00000000e+000,5.60519386e-045],[1,0.00000000e+000,0.00000000e+000,0.00000000e+000],[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="Invers_Direkte">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PV" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SP" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="fejl_e" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Invers_Direkte" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ADD_02" DataType="FBD_MATH" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[3,2.37175198e+001,0.00000000e+000,2.37175198e+001]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="23.71752"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="23.71752"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DERV_01" DataType="DERIVATIVE" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,5.00000000e+000,0,0.00000000e+000,1,0,1,0.00000000e+000,1.00000000e-001,0,0.00000000e+000,1.40129846e-043,3.19037545e-039,0.00000000e+000,7.89211295e-042,1.00000000e-001,0.00000000e+000,0.00000000e+000,1.00000000e-001,5.00000000e+000,5.00000000e+001]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="DERIVATIVE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Gain" DataType="REAL" Radix="Float" Value="5.0"/>
+<DataValueMember Name="ByPass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingMode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OversampleDT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RTSTime" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="RTSTimeStamp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DeltaT" DataType="REAL" Radix="Float" Value="0.1"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingModeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSMissed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeStampInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaTInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="INTG_01" DataType="INTEGRATOR" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,4.00000000e+000,1.00000000e+002,-1.00000000e+002,0,0.00000000e+000,1,0,1,2.37171383e+001,1.00000000e-001,0,0.00000000e+000,2.37171383e+001,1.40129846e-043,3.19037545e-039,0.00000000e+000,7.89211295e-042,1.00000000e-001,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="INTEGRATOR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Initialize" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InitialValue" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="IGain" DataType="REAL" Radix="Float" Value="4.0"/>
+<DataValueMember Name="HighLimit" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="LowLimit" DataType="REAL" Radix="Float" Value="-100.0"/>
+<DataValueMember Name="HoldHigh" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HoldLow" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingMode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OversampleDT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RTSTime" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="RTSTimeStamp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="23.717138"/>
+<DataValueMember Name="HighAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LowAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaT" DataType="REAL" Radix="Float" Value="0.1"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IGainInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HighLowLimsInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingModeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSMissed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeStampInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaTInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MUL_01" DataType="FBD_MATH" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[3,0.00000000e+000,2.15000000e+001,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="21.5"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SEL_01" DataType="SELECT" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0,0.00000000e+000,5.60519386e-045]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="SELECT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="In2" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SelectorIn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="FBD">
+<FBDContent SheetSize="A3 - 297 x 420 mm" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="280" Y="440" Operand="Invers_Direkte" HideDesc="false"/>
+<IRef ID="1" X="540" Y="560" Operand="Kd" HideDesc="false"/>
+<IRef ID="2" X="540" Y="540" Operand="Ki" HideDesc="false"/>
+<IRef ID="3" X="540" Y="520" Operand="Kp" HideDesc="false"/>
+<IRef ID="4" X="1200" Y="500" Operand="Manuel_Auto" HideDesc="false"/>
+<IRef ID="5" X="280" Y="400" Operand="PV" HideDesc="false"/>
+<IRef ID="6" X="280" Y="420" Operand="SP" HideDesc="false"/>
+<IRef ID="7" X="980" Y="500" Operand="U0" HideDesc="false"/>
+<IRef ID="8" X="1200" Y="480" Operand="U_man" HideDesc="false"/>
+<IRef ID="9" X="420" Y="240" Operand="Zero_Ki" HideDesc="false"/>
+<ORef ID="10" X="1480" Y="400" Operand="CV" HideDesc="false"/>
+<Block Type="ADD" ID="11" X="1060" Y="360" Operand="ADD_02" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="DERV" ID="12" X="640" Y="280" Operand="DERV_01" VisiblePins="In Gain ByPass Out" HideDesc="false"/>
+<Block Type="INTG" ID="13" X="640" Y="160" Operand="INTG_01" VisiblePins="In Initialize IGain Out" HideDesc="false"/>
+<Block Type="MUL" ID="14" X="640" Y="400" Operand="MUL_01" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="SEL" ID="15" X="1300" Y="340" Operand="SEL_01" VisiblePins="In1 In2 SelectorIn Out" HideDesc="false"/>
+<AddOnInstruction Name="Add_three_Numbers" ID="16" X="840" Y="360" Operand="Add_three_Numbers_01" VisiblePins="nr1 nr2 nr3 nr4"/>
+<AddOnInstruction Name="Invers_Direkte" ID="17" X="360" Y="340" Operand="Invers_Direkte_01" VisiblePins="PV SP fejl_e Invers_Direkte"/>
+<Wire FromID="0" ToID="17" ToParam="Invers_Direkte"/>
+<Wire FromID="1" ToID="12" ToParam="Gain"/>
+<Wire FromID="2" ToID="13" ToParam="IGain"/>
+<Wire FromID="3" ToID="14" ToParam="SourceB"/>
+<Wire FromID="4" ToID="15" ToParam="SelectorIn"/>
+<Wire FromID="5" ToID="17" ToParam="PV"/>
+<Wire FromID="6" ToID="17" ToParam="SP"/>
+<Wire FromID="7" ToID="11" ToParam="SourceB"/>
+<Wire FromID="8" ToID="15" ToParam="In1"/>
+<Wire FromID="9" ToID="13" ToParam="Initialize"/>
+<Wire FromID="11" FromParam="Dest" ToID="15" ToParam="In2"/>
+<Wire FromID="12" FromParam="Out" ToID="16" ToParam="nr2"/>
+<Wire FromID="13" FromParam="Out" ToID="16" ToParam="nr1"/>
+<Wire FromID="14" FromParam="Dest" ToID="16" ToParam="nr3"/>
+<Wire FromID="15" FromParam="Out" ToID="10"/>
+<Wire FromID="16" FromParam="nr4" ToID="11" ToParam="SourceA"/>
+<Wire FromID="17" FromParam="fejl_e" ToID="12" ToParam="In"/>
+<Wire FromID="17" FromParam="fejl_e" ToID="13" ToParam="In"/>
+<Wire FromID="17" FromParam="fejl_e" ToID="14" ToParam="SourceA"/>
+<TextBox ID="18" X="220" Y="460" Width="0">
+<Text>
+<![CDATA[Invers/Direkte
+1 = Invers
+0 = Direkte]]>
+</Text>
+</TextBox>
+<TextBox ID="19" X="860" Y="540" Width="0">
+<Text>
+<![CDATA[U0 kan bruges hvis man kun vil køre det som en 
+P regulator
+Hvis dette er tilfældet skal Ki og Kd sættes til 0]]>
+</Text>
+</TextBox>
+<TextBox ID="20" X="1140" Y="520" Width="0">
+<Text>
+<![CDATA[Styring
+0 = manuel
+1 = Regulering]]>
+</Text>
+</TextBox>
+<Attachment FromID="18" ToID="0"/>
+<Attachment FromID="19" ToID="7"/>
+<Attachment FromID="20" ToID="4"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="Add_three_Numbers"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Invers_Direkte"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="DampProces" Revision="1.0" Vendor="JPJohansen " ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2010-11-22T19:55:30.324Z" CreatedBy="DELL610_JJO\John" EditedDate="2022-11-16T10:34:58.139Z" EditedBy="PROCES\MSK" SoftwareRevision="v32.02"
+>
+<Description>
+<![CDATA[Til obligatorisk opgave 1 - PA3]]>
+</Description>
+<RevisionNote>
+<![CDATA[ændringer på dødtid og tidskonstant samt navn. den ]]>
+</RevisionNote>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="belastning" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="DeadTime" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Dødtid
+0.1  til 1.99 sek.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[2.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="2.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Tidskonstant" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tidskonstant i 
+LeadLag
+0.1  til 40.0 sek]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[2.00000000e+001]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="20.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PV" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="CV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="DEDT_01" DataType="DEADTIME" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,1.00000000e+000,1.00000000e+000,0.00000000e+000,0,0.00000000e+000,1,0,0,0.00000000e+000,0.00000000e+000,0,5.60519386e-045,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="DEADTIME">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Deadtime" DataType="REAL" Radix="Float" Value="1.0"/>
+<DataValueMember Name="Gain" DataType="REAL" Radix="Float" Value="1.0"/>
+<DataValueMember Name="Bias" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TimingMode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OversampleDT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RTSTime" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="RTSTimeStamp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DeltaT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InFaulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeadtimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingModeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSMissed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeStampInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaTInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ADD_01" DataType="FBD_MATH" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_MATH">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Dest" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LDLG_01" DataType="LEAD_LAG" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,0.00000000e+000,2.00000000e+001,1.00000000e+000,0.00000000e+000,0,0.00000000e+000,1,0,0,0.00000000e+000,0.00000000e+000,0,5.60519386e-045,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LEAD_LAG">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Initialize" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Lead" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Lag" DataType="REAL" Radix="Float" Value="20.0"/>
+<DataValueMember Name="Gain" DataType="REAL" Radix="Float" Value="1.0"/>
+<DataValueMember Name="Bias" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TimingMode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OversampleDT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RTSTime" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="RTSTimeStamp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DeltaT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LeadInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LagInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingModeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSMissed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeStampInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaTInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="HLL_01" DataType="HL_LIMIT" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[1,0.00000000e+000,1.00000000e+002,0.00000000e+000,0,0,0.00000000e+000,0,5.60519386e-045]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="HL_LIMIT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="HighLimit" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="LowLimit" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SelectLimit" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="HighAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LowAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LimitsInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SelectLimitInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SCL_01" DataType="SCALE" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[3,0.00000000e+000,1.00000000e+002,0.00000000e+000,1.50000000e+001,0.00000000e+000,0,0.00000000e+000,0,5.60519386e-045,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="SCALE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InRawMax" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="InRawMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMax" DataType="REAL" Radix="Float" Value="15.0"/>
+<DataValueMember Name="InEUMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Limiting" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MinAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InRawRangeInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SCL_02" DataType="SCALE" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[3,0.00000000e+000,1.00000000e+002,0.00000000e+000,-1.00000000e+002,0.00000000e+000,0,0.00000000e+000,0,5.60519386e-045,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="SCALE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InRawMax" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="InRawMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMax" DataType="REAL" Radix="Float" Value="-100.0"/>
+<DataValueMember Name="InEUMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Limiting" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MinAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InRawRangeInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StorageA" DataType="REAL" Dimensions="200" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="200" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.0"/>
+<Element Index="[2]" Value="0.0"/>
+<Element Index="[3]" Value="0.0"/>
+<Element Index="[4]" Value="0.0"/>
+<Element Index="[5]" Value="0.0"/>
+<Element Index="[6]" Value="0.0"/>
+<Element Index="[7]" Value="0.0"/>
+<Element Index="[8]" Value="0.0"/>
+<Element Index="[9]" Value="0.0"/>
+<Element Index="[10]" Value="0.0"/>
+<Element Index="[11]" Value="0.0"/>
+<Element Index="[12]" Value="0.0"/>
+<Element Index="[13]" Value="0.0"/>
+<Element Index="[14]" Value="0.0"/>
+<Element Index="[15]" Value="0.0"/>
+<Element Index="[16]" Value="0.0"/>
+<Element Index="[17]" Value="0.0"/>
+<Element Index="[18]" Value="0.0"/>
+<Element Index="[19]" Value="0.0"/>
+<Element Index="[20]" Value="0.0"/>
+<Element Index="[21]" Value="0.0"/>
+<Element Index="[22]" Value="0.0"/>
+<Element Index="[23]" Value="0.0"/>
+<Element Index="[24]" Value="0.0"/>
+<Element Index="[25]" Value="0.0"/>
+<Element Index="[26]" Value="0.0"/>
+<Element Index="[27]" Value="0.0"/>
+<Element Index="[28]" Value="0.0"/>
+<Element Index="[29]" Value="0.0"/>
+<Element Index="[30]" Value="0.0"/>
+<Element Index="[31]" Value="0.0"/>
+<Element Index="[32]" Value="0.0"/>
+<Element Index="[33]" Value="0.0"/>
+<Element Index="[34]" Value="0.0"/>
+<Element Index="[35]" Value="0.0"/>
+<Element Index="[36]" Value="0.0"/>
+<Element Index="[37]" Value="0.0"/>
+<Element Index="[38]" Value="0.0"/>
+<Element Index="[39]" Value="0.0"/>
+<Element Index="[40]" Value="0.0"/>
+<Element Index="[41]" Value="0.0"/>
+<Element Index="[42]" Value="0.0"/>
+<Element Index="[43]" Value="0.0"/>
+<Element Index="[44]" Value="0.0"/>
+<Element Index="[45]" Value="0.0"/>
+<Element Index="[46]" Value="0.0"/>
+<Element Index="[47]" Value="0.0"/>
+<Element Index="[48]" Value="0.0"/>
+<Element Index="[49]" Value="0.0"/>
+<Element Index="[50]" Value="0.0"/>
+<Element Index="[51]" Value="0.0"/>
+<Element Index="[52]" Value="0.0"/>
+<Element Index="[53]" Value="0.0"/>
+<Element Index="[54]" Value="0.0"/>
+<Element Index="[55]" Value="0.0"/>
+<Element Index="[56]" Value="0.0"/>
+<Element Index="[57]" Value="0.0"/>
+<Element Index="[58]" Value="0.0"/>
+<Element Index="[59]" Value="0.0"/>
+<Element Index="[60]" Value="0.0"/>
+<Element Index="[61]" Value="0.0"/>
+<Element Index="[62]" Value="0.0"/>
+<Element Index="[63]" Value="0.0"/>
+<Element Index="[64]" Value="0.0"/>
+<Element Index="[65]" Value="0.0"/>
+<Element Index="[66]" Value="0.0"/>
+<Element Index="[67]" Value="0.0"/>
+<Element Index="[68]" Value="0.0"/>
+<Element Index="[69]" Value="0.0"/>
+<Element Index="[70]" Value="0.0"/>
+<Element Index="[71]" Value="0.0"/>
+<Element Index="[72]" Value="0.0"/>
+<Element Index="[73]" Value="0.0"/>
+<Element Index="[74]" Value="0.0"/>
+<Element Index="[75]" Value="0.0"/>
+<Element Index="[76]" Value="0.0"/>
+<Element Index="[77]" Value="0.0"/>
+<Element Index="[78]" Value="0.0"/>
+<Element Index="[79]" Value="0.0"/>
+<Element Index="[80]" Value="0.0"/>
+<Element Index="[81]" Value="0.0"/>
+<Element Index="[82]" Value="0.0"/>
+<Element Index="[83]" Value="0.0"/>
+<Element Index="[84]" Value="0.0"/>
+<Element Index="[85]" Value="0.0"/>
+<Element Index="[86]" Value="0.0"/>
+<Element Index="[87]" Value="0.0"/>
+<Element Index="[88]" Value="0.0"/>
+<Element Index="[89]" Value="0.0"/>
+<Element Index="[90]" Value="0.0"/>
+<Element Index="[91]" Value="0.0"/>
+<Element Index="[92]" Value="0.0"/>
+<Element Index="[93]" Value="0.0"/>
+<Element Index="[94]" Value="0.0"/>
+<Element Index="[95]" Value="0.0"/>
+<Element Index="[96]" Value="0.0"/>
+<Element Index="[97]" Value="0.0"/>
+<Element Index="[98]" Value="0.0"/>
+<Element Index="[99]" Value="0.0"/>
+<Element Index="[100]" Value="0.0"/>
+<Element Index="[101]" Value="0.0"/>
+<Element Index="[102]" Value="0.0"/>
+<Element Index="[103]" Value="0.0"/>
+<Element Index="[104]" Value="0.0"/>
+<Element Index="[105]" Value="0.0"/>
+<Element Index="[106]" Value="0.0"/>
+<Element Index="[107]" Value="0.0"/>
+<Element Index="[108]" Value="0.0"/>
+<Element Index="[109]" Value="0.0"/>
+<Element Index="[110]" Value="0.0"/>
+<Element Index="[111]" Value="0.0"/>
+<Element Index="[112]" Value="0.0"/>
+<Element Index="[113]" Value="0.0"/>
+<Element Index="[114]" Value="0.0"/>
+<Element Index="[115]" Value="0.0"/>
+<Element Index="[116]" Value="0.0"/>
+<Element Index="[117]" Value="0.0"/>
+<Element Index="[118]" Value="0.0"/>
+<Element Index="[119]" Value="0.0"/>
+<Element Index="[120]" Value="0.0"/>
+<Element Index="[121]" Value="0.0"/>
+<Element Index="[122]" Value="0.0"/>
+<Element Index="[123]" Value="0.0"/>
+<Element Index="[124]" Value="0.0"/>
+<Element Index="[125]" Value="0.0"/>
+<Element Index="[126]" Value="0.0"/>
+<Element Index="[127]" Value="0.0"/>
+<Element Index="[128]" Value="0.0"/>
+<Element Index="[129]" Value="0.0"/>
+<Element Index="[130]" Value="0.0"/>
+<Element Index="[131]" Value="0.0"/>
+<Element Index="[132]" Value="0.0"/>
+<Element Index="[133]" Value="0.0"/>
+<Element Index="[134]" Value="0.0"/>
+<Element Index="[135]" Value="0.0"/>
+<Element Index="[136]" Value="0.0"/>
+<Element Index="[137]" Value="0.0"/>
+<Element Index="[138]" Value="0.0"/>
+<Element Index="[139]" Value="0.0"/>
+<Element Index="[140]" Value="0.0"/>
+<Element Index="[141]" Value="0.0"/>
+<Element Index="[142]" Value="0.0"/>
+<Element Index="[143]" Value="0.0"/>
+<Element Index="[144]" Value="0.0"/>
+<Element Index="[145]" Value="0.0"/>
+<Element Index="[146]" Value="0.0"/>
+<Element Index="[147]" Value="0.0"/>
+<Element Index="[148]" Value="0.0"/>
+<Element Index="[149]" Value="0.0"/>
+<Element Index="[150]" Value="0.0"/>
+<Element Index="[151]" Value="0.0"/>
+<Element Index="[152]" Value="0.0"/>
+<Element Index="[153]" Value="0.0"/>
+<Element Index="[154]" Value="0.0"/>
+<Element Index="[155]" Value="0.0"/>
+<Element Index="[156]" Value="0.0"/>
+<Element Index="[157]" Value="0.0"/>
+<Element Index="[158]" Value="0.0"/>
+<Element Index="[159]" Value="0.0"/>
+<Element Index="[160]" Value="0.0"/>
+<Element Index="[161]" Value="0.0"/>
+<Element Index="[162]" Value="0.0"/>
+<Element Index="[163]" Value="0.0"/>
+<Element Index="[164]" Value="0.0"/>
+<Element Index="[165]" Value="0.0"/>
+<Element Index="[166]" Value="0.0"/>
+<Element Index="[167]" Value="0.0"/>
+<Element Index="[168]" Value="0.0"/>
+<Element Index="[169]" Value="0.0"/>
+<Element Index="[170]" Value="0.0"/>
+<Element Index="[171]" Value="0.0"/>
+<Element Index="[172]" Value="0.0"/>
+<Element Index="[173]" Value="0.0"/>
+<Element Index="[174]" Value="0.0"/>
+<Element Index="[175]" Value="0.0"/>
+<Element Index="[176]" Value="0.0"/>
+<Element Index="[177]" Value="0.0"/>
+<Element Index="[178]" Value="0.0"/>
+<Element Index="[179]" Value="0.0"/>
+<Element Index="[180]" Value="0.0"/>
+<Element Index="[181]" Value="0.0"/>
+<Element Index="[182]" Value="0.0"/>
+<Element Index="[183]" Value="0.0"/>
+<Element Index="[184]" Value="0.0"/>
+<Element Index="[185]" Value="0.0"/>
+<Element Index="[186]" Value="0.0"/>
+<Element Index="[187]" Value="0.0"/>
+<Element Index="[188]" Value="0.0"/>
+<Element Index="[189]" Value="0.0"/>
+<Element Index="[190]" Value="0.0"/>
+<Element Index="[191]" Value="0.0"/>
+<Element Index="[192]" Value="0.0"/>
+<Element Index="[193]" Value="0.0"/>
+<Element Index="[194]" Value="0.0"/>
+<Element Index="[195]" Value="0.0"/>
+<Element Index="[196]" Value="0.0"/>
+<Element Index="[197]" Value="0.0"/>
+<Element Index="[198]" Value="0.0"/>
+<Element Index="[199]" Value="0.0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SCL_03" DataType="SCALE" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[3,0.00000000e+000,1.00000000e+002,0.00000000e+000,0.00000000e+000,1.00000000e+002,0,0.00000000e+000,0,5.60519386e-045,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="SCALE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InRawMax" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="InRawMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMax" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMin" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="Limiting" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MinAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InRawRangeInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="FBD">
+<FBDContent SheetSize="A3 - 297 x 420 mm" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="200" Y="160" Operand="CV" HideDesc="false"/>
+<IRef ID="1" X="500" Y="300" Operand="belastning" HideDesc="false"/>
+<ORef ID="2" X="1060" Y="260" Operand="PV" HideDesc="false"/>
+<Block Type="ADD" ID="3" X="780" Y="80" Operand="ADD_01" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="DEDT" ID="4" X="540" Y="80" Operand="DEDT_01" VisiblePins="In Deadtime Out" HideDesc="false">
+<Array Name="StorageArray" Operand="StorageA"/>
+</Block>
+<Block Type="HLL" ID="5" X="360" Y="80" Operand="HLL_01" VisiblePins="In Out HighAlarm LowAlarm" HideDesc="false"/>
+<Block Type="LDLG" ID="6" X="920" Y="80" Operand="LDLG_01" VisiblePins="In Out" HideDesc="false"/>
+<Block Type="SCL" ID="7" X="1060" Y="100" Operand="SCL_01" VisiblePins="In Out" HideDesc="false"/>
+<Block Type="SCL" ID="8" X="620" Y="260" Operand="SCL_02" VisiblePins="In Out" HideDesc="false"/>
+<Block Type="SCL" ID="9" X="260" Y="80" Operand="SCL_03" VisiblePins="In Out" HideDesc="false"/>
+<Wire FromID="0" ToID="9" ToParam="In"/>
+<Wire FromID="1" ToID="8" ToParam="In"/>
+<Wire FromID="3" FromParam="Dest" ToID="6" ToParam="In"/>
+<Wire FromID="4" FromParam="Out" ToID="3" ToParam="SourceA"/>
+<Wire FromID="5" FromParam="Out" ToID="4" ToParam="In"/>
+<Wire FromID="6" FromParam="Out" ToID="7" ToParam="In"/>
+<Wire FromID="7" FromParam="Out" ToID="2"/>
+<Wire FromID="8" FromParam="Out" ToID="3" ToParam="SourceB"/>
+<Wire FromID="9" FromParam="Out" ToID="5" ToParam="In"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+<Tags Use="Context">
+<Tag Name="Elektrode" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="OpenValue_V3" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[9.00000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="9.0"/>
+</Data>
+</Tag>
+<Tag Name="PT_3" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1.10937826e-005]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.10937826e-005"/>
+</Data>
+</Tag>
+<Tag Name="SP" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[9.50000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="9.5"/>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Target" Name="Analyse" TestEdits="false" MainRoutineName="Stat_Dyn_analyse" Disabled="false" UseAsFolder="false">
+<Tags>
+<Tag Name="BAND_01" TagType="Base" DataType="FBD_BOOLEAN_AND" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[505,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_AND">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="BNOT_01" TagType="Base" DataType="FBD_BOOLEAN_NOT" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[1,3,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_NOT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="1"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="DampProces_01" TagType="Base" DataType="DampProces" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[3,0.00000000e+000,2.00000000e+000,2.00000000e+001,1.10605533e-005,1.00000000e+002,[1,0.00000000e+000
+		,1.00000000e+000,1.00000000e+000,0.00000000e+000,0,0.00000000e+000,1,0,1,0.00000000e+000,9.99999978e-003
+		,0,0.00000000e+000,0.00000000e+000,1.00000000e+000,9.99999978e-003,1.40129846e-043,1.40129846e-044
+		,2.70303607e-039,0.00000000e+000,7.89211295e-042,9.99999978e-003,1.82168800e-043,4.34402524e-044
+		,0.00000000e+000,1.34462413e-037,2.80259693e-043],[3,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		],[1,0.00000000e+000,0.00000000e+000,2.00000000e+001,1.00000000e+000,0.00000000e+000,0,0.00000000e+000
+		,1,0,1,7.37370210e-005,9.99999978e-003,0,0.00000000e+000,1.40129846e-044,2.70303607e-039,0.00000000e+000
+		,7.89211295e-042,9.99999978e-003,0.00000000e+000,2.00000000e+001,0.00000000e+000,2.00000000e+001
+		,9.99999978e-003,2.49937526e-004,4.00099983e+001,0.00000000e+000,7.37370210e-005,2.49937526e-004
+		,-9.99500155e-001,0.00000000e+000,7.37370210e-005],[1,0.00000000e+000,1.00000000e+002,0.00000000e+000
+		,0,5,0.00000000e+000,0,5.60519386e-045],[3,7.37370210e-005,1.00000000e+002,0.00000000e+000,1.50000000e+001
+		,0.00000000e+000,1,1.10605533e-005,0,0.00000000e+000,1.00000000e+002,9.99999978e-003,1.10605533e-005
+		],[3,0.00000000e+000,1.00000000e+002,0.00000000e+000,-1.00000000e+002,0.00000000e+000,1,0.00000000e+000
+		,0,0.00000000e+000,1.00000000e+002,9.99999978e-003,0.00000000e+000],[0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		],[3,1.00000000e+002,1.00000000e+002,0.00000000e+000,0.00000000e+000,1.00000000e+002,1,0.00000000e+000
+		,0,0.00000000e+000,1.00000000e+002,9.99999978e-003,0.00000000e+000]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="DampProces">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="belastning" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DeadTime" DataType="REAL" Radix="Float" Value="2.0"/>
+<DataValueMember Name="Tidskonstant" DataType="REAL" Radix="Float" Value="20.0"/>
+<DataValueMember Name="PV" DataType="REAL" Radix="Float" Value="1.10605533e-005"/>
+<DataValueMember Name="CV" DataType="REAL" Radix="Float" Value="100.0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="GRT_01" TagType="Base" DataType="FBD_COMPARE" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[3,1.10716182e-005,9.00000000e+000]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_COMPARE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SourceA" DataType="REAL" Radix="Float" Value="1.10716182e-005"/>
+<DataValueMember Name="SourceB" DataType="REAL" Radix="Float" Value="9.0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Dest" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PID_regulator_01" TagType="Base" DataType="PID_regulator" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[255,9.50000000e+000,1.10716182e-005,6.00000000e+001,7.00000000e+000,0.00000000e+000,0.00000000e+000
+		,0.00000000e+000,-5.69999329e+002,[3,0.00000000e+000,0.00000000e+000,-5.69999329e+002,-5.69999329e+002
+		,[3,0.00000000e+000,0.00000000e+000,0.00000000e+000],[3,0.00000000e+000,-5.69999329e+002,-5.69999329e+002
+		]],[15,1.10716182e-005,9.50000000e+000,-9.49998856e+000,[1,0.00000000e+000,0.00000000e+000,0.00000000e+000
+		],[1,0.00000000e+000,0.00000000e+000,0.00000000e+000],[3,9.49998856e+000,-9.49998856e+000,1,-9.49998856e+000
+		,5.60519386e-045],[3,9.50000000e+000,1.10716182e-005,9.49998856e+000],[3,1.10716182e-005,9.50000000e+000
+		,-9.49998856e+000]],[3,-5.69999329e+002,0.00000000e+000,-5.69999329e+002],[1,-9.49998856e+000
+		,0.00000000e+000,0,0.00000000e+000,1,0,1,0.00000000e+000,9.99999978e-003,0,0.00000000e+000,1.40129846e-044
+		,2.70302206e-039,0.00000000e+000,7.89211295e-042,9.99999978e-003,-9.49998856e+000,0.00000000e+000
+		,9.99999978e-003,0.00000000e+000,0.00000000e+000],[3,-9.49998856e+000,0.00000000e+000,7.00000000e+000
+		,1.00000000e+002,-1.00000000e+002,0,0.00000000e+000,1,0,1,0.00000000e+000,9.99999978e-003,0
+		,-9.49998856e+000,0.00000000e+000,1.40129846e-044,2.70302206e-039,0.00000000e+000,7.89211295e-042
+		,9.99999978e-003,0.00000000e+000],[3,-9.49998856e+000,6.00000000e+001,-5.69999329e+002],[3,0.00000000e+000
+		,-5.69999329e+002,1,-5.69999329e+002,5.60519386e-045]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="PID_regulator">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="SP" DataType="REAL" Radix="Float" Value="9.5"/>
+<DataValueMember Name="PV" DataType="REAL" Radix="Float" Value="1.10716182e-005"/>
+<DataValueMember Name="Kp" DataType="REAL" Radix="Float" Value="60.0"/>
+<DataValueMember Name="Ki" DataType="REAL" Radix="Float" Value="7.0"/>
+<DataValueMember Name="Kd" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="U0" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="U_man" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="CV" DataType="REAL" Radix="Float" Value="-569.9993"/>
+<DataValueMember Name="Invers_Direkte" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Manuel_Auto" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Zero_Ki" DataType="BOOL" Value="1"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="SCL_01" TagType="Base" DataType="SCALE" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[3,0.00000000e+000,3.00000000e+004,0.00000000e+000,0.00000000e+000,1.00000000e+002,1,1.00000000e+002
+		,0,0.00000000e+000,3.00000000e+004,3.33333337e-005,1.00000000e+002]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SCALE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InRawMax" DataType="REAL" Radix="Float" Value="30000.0"/>
+<DataValueMember Name="InRawMin" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMax" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="InEUMin" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="Limiting" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="MaxAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MinAlarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InRawRangeInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="SEL_01" TagType="Base" DataType="SELECT" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[1,0.00000000e+000,-5.69999329e+002,1,1.00000000e+002,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SELECT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="In2" DataType="REAL" Radix="Float" Value="-569.9993"/>
+<DataValueMember Name="SelectorIn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="100.0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="TONR_01" TagType="Base" DataType="FBD_TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[1,1,30000,0,0,10,1652623,5632,1008981771,0,0,1]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="30000"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Routines>
+<Routine Name="Stat_Dyn_analyse" Type="FBD">
+<FBDContent SheetSize="A3 - 297 x 420 mm" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="300" Y="280" Operand="Elektrode" HideDesc="false"/>
+<IRef ID="1" X="960" Y="580" Operand="Elektrode" HideDesc="false"/>
+<IRef ID="2" X="680" Y="620" Operand="OpenValue_V3" HideDesc="false"/>
+<IRef ID="3" X="280" Y="440" Operand="PT_3" HideDesc="false"/>
+<IRef ID="4" X="680" Y="600" Operand="PT_3" HideDesc="false"/>
+<IRef ID="5" X="280" Y="420" Operand="SP" HideDesc="false"/>
+<ORef ID="6" X="1210" Y="360" Operand="PT_3" HideDesc="false"/>
+<Block Type="BAND" ID="7" X="1000" Y="520" Operand="BAND_01" VisiblePins="In1 In2 In3 In4 Out" HideDesc="false"/>
+<Block Type="BNOT" ID="8" X="280" Y="540" Operand="BNOT_01" VisiblePins="In Out" HideDesc="false"/>
+<Block Type="GRT" ID="9" X="740" Y="540" Operand="GRT_01" VisiblePins="SourceA SourceB Dest" HideDesc="false"/>
+<Block Type="SCL" ID="10" X="600" Y="220" Operand="SCL_01" VisiblePins="In Out" HideDesc="false"/>
+<Block Type="SEL" ID="11" X="740" Y="340" Operand="SEL_01" VisiblePins="In1 In2 SelectorIn Out" HideDesc="false"/>
+<Block Type="TONR" ID="12" X="420" Y="220" Operand="TONR_01" VisiblePins="TimerEnable PRE Reset ACC DN" HideDesc="false"/>
+<AddOnInstruction Name="DampProces" ID="13" X="1040" Y="300" Operand="DampProces_01" VisiblePins="PV CV"/>
+<AddOnInstruction Name="PID_regulator" ID="14" X="400" Y="360" Operand="PID_regulator_01" VisiblePins="SP PV Kp Ki Kd U0 U_man CV Invers_Direkte Manuel_Auto Zero_Ki"/>
+<Wire FromID="0" ToID="12" ToParam="TimerEnable"/>
+<Wire FromID="1" ToID="7" ToParam="In1"/>
+<Wire FromID="2" ToID="9" ToParam="SourceB"/>
+<Wire FromID="3" ToID="14" ToParam="PV"/>
+<Wire FromID="4" ToID="9" ToParam="SourceA"/>
+<Wire FromID="5" ToID="14" ToParam="SP"/>
+<Wire FromID="7" FromParam="Out" ToID="8" ToParam="In"/>
+<Wire FromID="7" FromParam="Out" ToID="11" ToParam="SelectorIn"/>
+<Wire FromID="8" FromParam="Out" ToID="14" ToParam="Zero_Ki"/>
+<Wire FromID="9" FromParam="Dest" ToID="7" ToParam="In2"/>
+<Wire FromID="10" FromParam="Out" ToID="11" ToParam="In1"/>
+<Wire FromID="11" FromParam="Out" ToID="13" ToParam="CV"/>
+<Wire FromID="12" FromParam="ACC" ToID="10" ToParam="In"/>
+<Wire FromID="13" FromParam="PV" ToID="6"/>
+<Wire FromID="14" FromParam="CV" ToID="11" ToParam="In2"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
