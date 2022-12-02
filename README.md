@@ -10,7 +10,7 @@ I det følgende skal udarbejdes et PLC-program, der kan varetage regulering og s
 Her følger den umiddelbare opgavefordeling.
 
 **Malthe**
-- [ ] Regulering - Dampproduktion
+- [ ] Regulering - Dampproduktion (Elektrodekammer)
 	- [ ] Kravspecifikation og testark
 	- [x] Kodedesign
 	- [x] Kodeudfærdigelse
