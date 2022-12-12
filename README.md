@@ -16,6 +16,7 @@ Her følger den umiddelbare opgavefordeling.
 	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+	- [x] Statisk/Dynamisk Analyse
 - [ ] Styring af kedlens vandkvalitet
 	- [ ] Kravspecifikation og testark
 	- [ ] Kodedesign
@@ -26,11 +27,11 @@ Her følger den umiddelbare opgavefordeling.
 
 **Marius**
 - [ ] Regulering - Fødevadskammer
-	- [x] Kravspecifikation
-	- [ ] Testark
+	- [x] Kravspecifikation og Testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
 	- [ ] Test af kode
+	- [x] Statisk/Dynamisk Analyse
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Start/Stop/Nødstop (Marius)
 	- [ ] Testkrav (testark)
@@ -42,8 +43,7 @@ Her følger den umiddelbare opgavefordeling.
 
 **Magnus**
 - [ ] Regulering - Damp til opsamlingstank	
-	- [x] Kravspecifikation
-	- [x] Testark
+	- [x] Kravspecifikation og Testark
 	- [x] Kodedesign
 	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
@@ -61,8 +61,8 @@ Her følger den umiddelbare opgavefordeling.
 	- [ ] Kodedesign
 	- [ ] Programmering
 	- [ ] Test af kode
+	- [x] Statisk/Dynamisk Analyse
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-
 - [ ] HMI-Projekt
 	- [ ] Kravspecifikation
 	- [ ] Design
