@@ -10,15 +10,15 @@ I det følgende skal udarbejdes et PLC-program, der kan varetage regulering og s
 Listen viser de identificerede delopgaver til besvarelsen af opgaven. Det muliggør en agil udviklingsproces.
 
 I det følgende menes der med:
-Analyse = Statisk og dynamisk analyse
+Analyse = Statisk og dynamisk analyse udført
 Udvikling = Design, Implementation og Test
 Rapportafsnit = Skrevet og korrekturlæst af mindst   
 
 - [x] Overordnede Kundekrav og kundetests
 - [x] Analyse af proces: elektrodekammer-process
 - [x] Analyse af proces: fødevandskammer
-- [ ] Analyse af proces: damp til opsamling
-- [ ] Analyse af proces: kondenstank
+- [x] Analyse af proces: damp til opsamling
+- [x] Analyse af proces: kondenstank
 - [ ] Udvikling af regulator til elektrodekammer
 - [ ] Udvikling af kaskade-regulering til elektrodekammer
 - [ ] Udvikling af Regulator til fødevandskammer
@@ -35,6 +35,8 @@ Rapportafsnit = Skrevet og korrekturlæst af mindst
 	- [ ] Kaskaderegulering
 	- [ ] 1. ordens og 2. ordenssystemer
 - [ ] Rapportafsnit: Genstandsfelt (Statiske og Dynamiske Analyse)
+	- [x] Skrevet
+	- [ ] Korrekturlæst
 - [ ] Rapportafsnit: Genstandsfelt (Regulatorer og indregulering)
 - [ ] Rapportafsnit: Genstandsfelt (Tests)
 - [ ] Rapportafsnit: Genstandsfelt (Opfyldelse af kundekrav)
