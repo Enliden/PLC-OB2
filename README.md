@@ -8,6 +8,22 @@ I det følgende skal udarbejdes et PLC-program, der kan varetage regulering og s
 
 ## Opgavefordeling
 Her følger den umiddelbare opgavefordeling.
+Analyse = Statisk og dynamisk analyse
+Udvikling = Design, Implementation og Test
+
+- [x] Overordnede Kundekrav og kundetests
+- [x] Analyse af proces: elektrodekammer-process
+- [x] Analyse af proces: fødevandskammer
+- [ ] Analyse af proces: damp til opsamling
+- [ ] Analyse af proces: kondenstank
+- [ ] Udvikling af regulator til elektrodekammer
+- [ ] Udvikling af Regulator til fødevandskammer
+- [ ] Udvikling af Regulator til opsamlingstank
+- [ ] Udvikling af Regulator til kondenstank
+- [ ] Udvikling af Styring: Kedlens vandkvalitet
+- [ ] Udvikling af Styring: Start/Stop/Nødstop
+- [ ] Udvikling af Styring: Alarmer
+- [ ] Udvikling af Styring: HMI
 
 **Malthe**
 - [ ] Regulering - Dampproduktion (Elektrodekammer)
@@ -26,7 +42,7 @@ Her følger den umiddelbare opgavefordeling.
 
 
 **Marius**
-- [ ] Regulering - Fødevadskammer
+- [ ] Regulering - Fødevandskammer
 	- [x] Kravspecifikation og Testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
