@@ -15,6 +15,7 @@ Udvikling = Design, Implementation og Test
 Rapportafsnit = Skrevet og korrekturlæst af mindst   
 
 - [x] Overordnede Kundekrav og kundetests
+- [x] Identifikation og opsætning af Rapportstruktur
 - [x] Analyse af proces: elektrodekammer-process
 - [x] Analyse af proces: fødevandskammer
 - [x] Analyse af proces: damp til opsamling
