@@ -4,12 +4,15 @@ I det følgende skal udarbejdes et PLC-program, der kan varetage regulering og s
  - **Kravspecifikation og test** : En liste over de tekniske test vi har og ikke har gennemført for reguleringen
  - **Kodedesign** : En kort gennemgang af programmets struktur evt. V-modellen
  - **Kodeudfærdigelse** : Her beskrives, hvilke programmeringssprog, der er udnyttet. Omtal også valg af indregulering og process-parametre (dødtid, tidskonstant, indreguleringstid osv)
- 
 
-## Opgavefordeling
-Her følger den umiddelbare opgavefordeling.
+
+## Todo-liste
+Listen viser de identificerede delopgaver til besvarelsen af opgaven. Det muliggør en agil udviklingsproces.
+
+I det følgende menes der med:
 Analyse = Statisk og dynamisk analyse
 Udvikling = Design, Implementation og Test
+Rapportafsnit = Skrevet og korrekturlæst af mindst   
 
 - [x] Overordnede Kundekrav og kundetests
 - [x] Analyse af proces: elektrodekammer-process
@@ -17,23 +20,40 @@ Udvikling = Design, Implementation og Test
 - [ ] Analyse af proces: damp til opsamling
 - [ ] Analyse af proces: kondenstank
 - [ ] Udvikling af regulator til elektrodekammer
+- [ ] Udvikling af kaskade-regulering til elektrodekammer
 - [ ] Udvikling af Regulator til fødevandskammer
 - [ ] Udvikling af Regulator til opsamlingstank
 - [ ] Udvikling af Regulator til kondenstank
 - [ ] Udvikling af Styring: Kedlens vandkvalitet
 - [ ] Udvikling af Styring: Start/Stop/Nødstop
 - [ ] Udvikling af Styring: Alarmer
+- [ ] Sammensætning af Simulatorer og regulatorer
 - [ ] Udvikling af Styring: HMI
+- [ ] Rapportafsnit: Indledning
+- [ ] Rapportafsnit: Metode
+- [ ] Rapportafsnit: Genstandsfelt (Teori)
+	- [ ] Kaskaderegulering
+	- [ ] 1. ordens og 2. ordenssystemer
+- [ ] Rapportafsnit: Genstandsfelt (Statiske og Dynamiske Analyse)
+- [ ] Rapportafsnit: Genstandsfelt (Regulatorer og indregulering)
+- [ ] Rapportafsnit: Genstandsfelt (Tests)
+- [ ] Rapportafsnit: Genstandsfelt (Opfyldelse af kundekrav)
+- [ ] Rapportafsnit: Diskussion
+- [ ] Rapportafsnit: Konklusion
+- [ ] Rapportafsnit: Abstract
 
+
+## Fordeling af Udviklingsopgaver
+Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-modellen og fordele dem.
 **Malthe**
-- [ ] Regulering - Dampproduktion (Elektrodekammer)
+- [ ] Udvikling af Regulering: Dampproduktion (Elektrodekammer)
 	- [ ] Kravspecifikation og testark
 	- [x] Kodedesign
 	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 	- [x] Statisk/Dynamisk Analyse
-- [ ] Styring af kedlens vandkvalitet
+- [ ] Udvikling af Styring: Kedlens vandkvalitet
 	- [ ] Kravspecifikation og testark
 	- [ ] Kodedesign
 	- [ ] Kodeudfærdigelse
@@ -42,14 +62,14 @@ Udvikling = Design, Implementation og Test
 
 
 **Marius**
-- [ ] Regulering - Fødevandskammer
+- [ ] Udvikling af Regulering: Fødevandskammer
 	- [x] Kravspecifikation og Testark
-	- [ ] Kodedesign
+	- [x] Kodedesign
 	- [ ] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [x] Statisk/Dynamisk Analyse
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-- [ ] Start/Stop/Nødstop (Marius)
+- [ ] Udvikling af styring: Start/Stop/Nødstop
 	- [ ] Testkrav (testark)
 	- [ ] Design
 	- [ ] Programmering
@@ -58,13 +78,13 @@ Udvikling = Design, Implementation og Test
 - [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
 
 **Magnus**
-- [ ] Regulering - Damp til opsamlingstank	
+- [ ] Udvikling af Regulering: Damp til opsamlingstank	
 	- [x] Kravspecifikation og Testark
 	- [x] Kodedesign
 	- [x] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-- [ ] Alarmer
+- [ ] Udvikling af Styring: Alarmer
 	- [ ] Krav
 	- [ ] Design
 	- [ ] Kode
@@ -72,25 +92,16 @@ Udvikling = Design, Implementation og Test
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 **Bo**
-- [ ] Regulering - Kondenstank	
+- [ ] Udvikling af Regulering: Kondenstank	
 	- [ ] Kravspecificering og testark
 	- [ ] Kodedesign
 	- [ ] Programmering
 	- [ ] Test af kode
 	- [x] Statisk/Dynamisk Analyse
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-- [ ] HMI-Projekt
+- [ ] Udvikling af HMI-Projekt
 	- [ ] Kravspecifikation
 	- [ ] Design
 	- [ ] Programmering og opsætning
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-
-# V-modellen
-Ovenstående to-do liste er udarbejdet efter trin 2-4 i V-modellen. V-modellen består af 5 trin.
-
-1. Identifikation af kundekrav: Del og hersk, dvs. opgaven opdeles i de delprogrammer og -opgaver, som skal løses.
-2. Identifikation af tekniske krav og design af kode med henblik på at leve op til de krav.
-3. Implementering af programkode'
-4. Test af programkode ifht. tekniske krav
-5. Samling af alt kode, hele programmet og test ifht. kundekrav.
