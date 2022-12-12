@@ -39,6 +39,10 @@ Rapportafsnit = Skrevet og korrekturlæst af mindst
 	- [x] Skrevet
 	- [ ] Korrekturlæst
 - [ ] Rapportafsnit: Genstandsfelt (Regulatorer og indregulering)
+	- [ ] Regulator til elektrodekammer
+	- [ ] Regulator til fødevandskammer
+	- [ ] Regulator til opsamlingstank
+	- [ ] Regulator til kondenstank
 - [ ] Rapportafsnit: Genstandsfelt (Tests)
 - [ ] Rapportafsnit: Genstandsfelt (Opfyldelse af kundekrav)
 - [ ] Rapportafsnit: Diskussion
