@@ -22,32 +22,32 @@ Rapportafsnit = Skrevet og korrekturlæst af mindst
 - [x] Analyse af proces: kondenstank
 - [ ] Udvikling af regulator til elektrodekammer
 - [ ] Udvikling af kaskade-regulering til elektrodekammer
-- [ ] Udvikling af Regulator til fødevandskammer
-- [ ] Udvikling af Regulator til opsamlingstank
-- [ ] Udvikling af Regulator til kondenstank
-- [ ] Udvikling af Styring: Kedlens vandkvalitet
+- [x] Udvikling af Regulator til fødevandskammer
+- [x] Udvikling af Regulator til opsamlingstank
+- [x] Udvikling af Regulator til kondenstank
+- [x] Udvikling af Styring: Kedlens vandkvalitet
 - [ ] Udvikling af Styring: Start/Stop/Nødstop
 - [ ] Udvikling af Styring: Alarmer
-- [ ] Sammensætning af Simulatorer og regulatorer
-- [ ] Udvikling af Styring: HMI
-- [ ] Rapportafsnit: Indledning
-- [ ] Rapportafsnit: Metode
-- [ ] Rapportafsnit: Genstandsfelt (Teori)
-	- [ ] Kaskaderegulering
-	- [ ] 1. ordens og 2. ordenssystemer
-- [ ] Rapportafsnit: Genstandsfelt (Statiske og Dynamiske Analyse)
+- [x] Sammensætning af Simulatorer og regulatorer
+- [x] Udvikling af Styring: HMI
+- [x] Rapportafsnit: Indledning
+- [x] Rapportafsnit: Metode
+- [x] Rapportafsnit: Genstandsfelt (Teori)
+	- [x] Kaskaderegulering
+	- [x] 1. ordens og 2. ordenssystemer
+- [x] Rapportafsnit: Genstandsfelt (Statiske og Dynamiske Analyse)
 	- [x] Skrevet
-	- [ ] Korrekturlæst
-- [ ] Rapportafsnit: Genstandsfelt (Regulatorer og indregulering)
+	- [x] Korrekturlæst
+- [x] Rapportafsnit: Genstandsfelt (Regulatorer og indregulering)
 	- [ ] Regulator til elektrodekammer
-	- [ ] Regulator til fødevandskammer
-	- [ ] Regulator til opsamlingstank
-	- [ ] Regulator til kondenstank
-- [ ] Rapportafsnit: Genstandsfelt (Tests)
-- [ ] Rapportafsnit: Genstandsfelt (Opfyldelse af kundekrav)
-- [ ] Rapportafsnit: Diskussion
-- [ ] Rapportafsnit: Konklusion
-- [ ] Rapportafsnit: Abstract
+	- [x] Regulator til fødevandskammer
+	- [x] Regulator til opsamlingstank
+	- [x] Regulator til kondenstank
+- [x] Rapportafsnit: Genstandsfelt (Tests)
+- [x] Rapportafsnit: Genstandsfelt (Opfyldelse af kundekrav)
+- [x] Rapportafsnit: Diskussion
+- [x] Rapportafsnit: Konklusion
+- [x] Rapportafsnit: Abstract
 
 
 ## Fordeling af Udviklingsopgaver
@@ -56,7 +56,7 @@ Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-
 - [ ] Udvikling af Regulering: Dampproduktion (Elektrodekammer)
 	- [ ] Kravspecifikation og testark
 	- [x] Kodedesign
-	- [x] Kodeudfærdigelse
+	- [ ] Kodeudfærdigelse
 	- [ ] Test af kode
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 	- [x] Statisk/Dynamisk Analyse
@@ -69,13 +69,13 @@ Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-
 
 
 **Marius**
-- [ ] Udvikling af Regulering: Fødevandskammer
+- [x] Udvikling af Regulering: Fødevandskammer
 	- [x] Kravspecifikation og Testark
 	- [x] Kodedesign
-	- [ ] Kodeudfærdigelse
-	- [ ] Test af kode
+	- [x] Kodeudfærdigelse
+	- [x] Test af kode
 	- [x] Statisk/Dynamisk Analyse
-	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+	- [x] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Udvikling af styring: Start/Stop/Nødstop
 	- [ ] Testkrav (testark)
 	- [ ] Design
@@ -85,12 +85,12 @@ Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-
 - [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
 
 **Magnus**
-- [ ] Udvikling af Regulering: Damp til opsamlingstank	
+- [x] Udvikling af Regulering: Damp til opsamlingstank	
 	- [x] Kravspecifikation og Testark
 	- [x] Kodedesign
 	- [x] Kodeudfærdigelse
-	- [ ] Test af kode
-	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+	- [x] Test af kode
+	- [x] Dokumentation (kodekommentar og rapportpunkter)
 - [ ] Udvikling af Styring: Alarmer
 	- [ ] Krav
 	- [ ] Design
@@ -99,16 +99,16 @@ Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-
 	- [ ] Dokumentation (kodekommentar og rapportpunkter)
 
 **Bo**
-- [ ] Udvikling af Regulering: Kondenstank	
-	- [ ] Kravspecificering og testark
-	- [ ] Kodedesign
-	- [ ] Programmering
-	- [ ] Test af kode
+- [x] Udvikling af Regulering: Kondenstank	
+	- [x] Kravspecificering og testark
+	- [x] Kodedesign
+	- [x] Programmering
+	- [x] Test af kode
 	- [x] Statisk/Dynamisk Analyse
-	- [ ] Dokumentation (kodekommentar og rapportpunkter)
-- [ ] Udvikling af HMI-Projekt
-	- [ ] Kravspecifikation
-	- [ ] Design
-	- [ ] Programmering og opsætning
-	- [ ] Test af kode
-	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+	- [x] Dokumentation (kodekommentar og rapportpunkter)
+- [x] Udvikling af HMI-Projekt
+	- [x] Kravspecifikation
+	- [x] Design
+	- [x] Programmering og opsætning
+	- [x] Test af kode
+	- [x] Dokumentation (kodekommentar og rapportpunkter)
