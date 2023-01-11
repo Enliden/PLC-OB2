@@ -78,12 +78,12 @@ Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-
 	- [x] Test af kode
 	- [x] Statisk/Dynamisk Analyse
 	- [x] Dokumentation (kodekommentar og rapportpunkter)
-- [ ] Udvikling af styring: Start/Stop/Nødstop
-	- [ ] Testkrav (testark)
-	- [ ] Design
-	- [ ] Programmering
-	- [ ] Test af kode
-	- [ ] Dokumentation (kodekommentar og rapportpunkter)
+- [x] Udvikling af styring: Start/Stop/Nødstop
+	- [x] Testkrav (testark)
+	- [x] Design
+	- [x] Programmering
+	- [x] Test af kode
+	- [x] Dokumentation (kodekommentar og rapportpunkter)
 - [x] Udarbejd ark til kundekrav; Udf. Marius og Magnus
 
 **Magnus**
