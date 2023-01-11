@@ -52,6 +52,8 @@ Rapportafsnit = Skrevet og korrekturlæst af mindst
 
 ## Fordeling af Udviklingsopgaver
 Vi har i de følgende forsøgt at udspecificere udviklingsopgavernes trin jf. V-modellen og fordele dem.
+
+
 **Malthe**
 - [ ] Udvikling af Regulering: Dampproduktion (Elektrodekammer)
 	- [ ] Kravspecifikation og testark
